@@ -77,6 +77,12 @@ figurecaption {
     break-before: column;
 }
 
+.flexz { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
 @end
 
 @onload
@@ -102,35 +108,38 @@ window.LIA.settings.font_size = 2
 
 #### Regel 1
 
-<div class="kasten">
+
+![Regel 1](./img/1-Regel.svg)<!-- style="display: flex;justify-content: center;align-items: center; width:40%; padding:1em;" -->
+
+<p class="kasten">
 Jede Entitätsklasse wird in eine Relation (Tabelle) mit Primärschlüssel(n) transformiert.
-</div>
+</p>
 
 
 #### Regel 2
 
-<div class="kasten">
+<p class="kasten">
 Eine 1 : 1 Beziehung im ER – Modell wird umgesetzt, indem ein beliebiger Primärschlüssel einer Entitätsklasse zum Fremdschlüssel der anderen Entitätsklasse wird.
-</div>
+</p>
 
 #### Regel 3
 
-<div class="kasten">
+<p class="kasten">
 Eine 1 : n Beziehung wird so umgesetzt, dass der Primärschlüs-sel der 1-Entitätsklasse Fremdschlüssel der n-Entitätsklasse wird.
-</div>
+</p>
 
 
 #### Regel 4
 
-<div class="kasten">
+<p class="kasten">
 Jede m : n Beziehung im ER – Modell wird umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primär-schlüssel beider Entitätsklassen als Fremdschlüssel beinhaltet.
-</div>
+</p>
 
 #### Regel 5
 
-<div class="kasten">
+<p class="kasten">
 Jede beliebige Beziehung mit Beziehungsattribut wird ins Relationenmodell umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primärschlüssel beider Entitätsklassen als Fremdschlüssel und die Beziehungsattribute beinhaltet.
-</div>
+</p>
 
 ## 1.5 Implementierung
 
