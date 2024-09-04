@@ -98,7 +98,39 @@ window.LIA.settings.font_size = 2
 
 ### 1.4.2 ER-Modell
 
-### 1.4.3. Relationenmodell
+### 1.4.3. Transformation ER-Modell in Relationenmodell
+
+#### Regel 1
+
+<div class="kasten">
+Jede Entitätsklasse wird in eine Relation (Tabelle) mit Primärschlüssel(n) transformiert.
+</div>
+
+
+#### Regel 2
+
+<div class="kasten">
+Eine 1 : 1 Beziehung im ER – Modell wird umgesetzt, indem ein beliebiger Primärschlüssel einer Entitätsklasse zum Fremdschlüssel der anderen Entitätsklasse wird.
+</div>
+
+#### Regel 3
+
+<div class="kasten">
+Eine 1 : n Beziehung wird so umgesetzt, dass der Primärschlüs-sel der 1-Entitätsklasse Fremdschlüssel der n-Entitätsklasse wird.
+</div>
+
+
+#### Regel 4
+
+<div class="kasten">
+Jede m : n Beziehung im ER – Modell wird umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primär-schlüssel beider Entitätsklassen als Fremdschlüssel beinhaltet.
+</div>
+
+#### Regel 5
+
+<div class="kasten">
+Jede beliebige Beziehung mit Beziehungsattribut wird ins Relationenmodell umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primärschlüssel beider Entitätsklassen als Fremdschlüssel und die Beziehungsattribute beinhaltet.
+</div>
 
 ## 1.5 Implementierung
 
