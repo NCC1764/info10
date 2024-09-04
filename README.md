@@ -106,40 +106,95 @@ window.LIA.settings.font_size = 2
 
 ### 1.4.3. Transformation ER-Modell in Relationenmodell
 
+> - Transformationsregeln erlauben das automatische Überführen des semantischen Modells (ER-Modell) ins Relationenmodell (Tabellen).
+> - Wir nutzen 5 Regeln.
+
 #### Regel 1
 
-
-![Regel 1](./img/1-Regel.svg)<!-- style="display: flex;justify-content: center;align-items: center; width:40%; padding:1em;" -->
+![Regel 1](./img/1-Regel.svg)<!-- style="width: 30%; padding:1em;" -->
 
 <p class="kasten">
 Jede Entitätsklasse wird in eine Relation (Tabelle) mit Primärschlüssel(n) transformiert.
 </p>
 
+|<!-- style="border: 1px solid black;" -->Ehefrau |
+|:------------:|:--:|:--:|
+|<!-- style="border: 1px solid black;" --><u>EFrauID</u>| <!-- style="border: 1px solid black;" -->VN |<!-- style="border: 1px solid black;" --> NN |
 
 #### Regel 2
+
+![Regel 2](./img/2-Regel.svg)<!-- style="width: 30%; padding:1em;" -->
 
 <p class="kasten">
 Eine 1 : 1 Beziehung im ER – Modell wird umgesetzt, indem ein beliebiger Primärschlüssel einer Entitätsklasse zum Fremdschlüssel der anderen Entitätsklasse wird.
 </p>
 
+|<!-- style="border: 1px solid black;" --> Ehefrau |
+|:--------:|:-------:|:------:|
+|<!-- style="border: 1px solid black;" --> <u>EFrauID</u> |<!-- style="border: 1px solid black;" --> VN |<!-- style="border: 1px solid black;" --> NN |
+
+|<!-- style="border: 1px solid black;" --> Ehemann |
+|:--------:|:-------:|:------:|:------:|
+|<!-- style="border: 1px solid black;" --> <u>EMannID</u> |<!-- style="border: 1px solid black;" --> VN |<!-- style="border: 1px solid black;" --> NN |<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">EFrauID</span> |
+
 #### Regel 3
+
+![Regel 3](./img/3-Regel.svg)<!-- style="width: 30%; padding:1em;" -->
 
 <p class="kasten">
 Eine 1 : n Beziehung wird so umgesetzt, dass der Primärschlüs-sel der 1-Entitätsklasse Fremdschlüssel der n-Entitätsklasse wird.
 </p>
 
+|<!-- style="border: 1px solid black;" --> Schüler |
+|:--------:|:-------:|:------:|:------:|
+|<!-- style="border: 1px solid black;" --><u>SchülerNr</u>|<!-- style="border: 1px solid black;" -->VN|<!-- style="border: 1px solid black;" -->NN|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">KlasseID</span>|
+
+|<!-- style="border: 1px solid black;" -->Klasse |
+|:--------:|:-------:|:------:|
+|<!-- style="border: 1px solid black;" --><u>KlasseID</u>|<!-- style="border: 1px solid black;" -->KlasseZi|<!-- style="border: 1px solid black;" -->Profil|
 
 #### Regel 4
+
+![Regel 4](./img/4-Regel.svg)<!-- style="width: 30%; padding:1em;" -->
 
 <p class="kasten">
 Jede m : n Beziehung im ER – Modell wird umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primär-schlüssel beider Entitätsklassen als Fremdschlüssel beinhaltet.
 </p>
 
+|<!-- style="border: 1px solid black;" -->Lehrerin                    |
+|:--------:|:-------:|:------:|
+|<!-- style="border: 1px solid black;" --><u>LNr</u>|<!-- style="border: 1px solid black;" -->VN|<!-- style="border: 1px solid black;" -->NN|
+
+
+|<!-- style="border: 1px solid black;" -->unterrichtet|
+|:--------:|:-------:|:------:|
+|<!-- style="border: 1px solid black;" --><u>UNr</u>|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">LNr</span>|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">KlasseID</span>|
+
+
+|<!-- style="border: 1px solid black;" -->Klasse                      |
+|:-------------:|:------:|:----:|
+|<!-- style="border: 1px solid black;" --><u>KlasseID</u>|<!-- style="border: 1px solid black;" -->KlasseZi|<!-- style="border: 1px solid black;" -->Profil|
+
+
 #### Regel 5
+
+![Regel 5](./img/5-Regel.svg)<!-- style="width: 30%; padding:1em;" -->
 
 <p class="kasten">
 Jede beliebige Beziehung mit Beziehungsattribut wird ins Relationenmodell umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primärschlüssel beider Entitätsklassen als Fremdschlüssel und die Beziehungsattribute beinhaltet.
 </p>
+
+|<!-- style="border: 1px solid black;" -->  Ehefrau               |
+|:------------:|:--:|:--:|
+|<!-- style="border: 1px solid black;" --><u>EFrauID</u>|<!-- style="border: 1px solid black;" --> VN |<!-- style="border: 1px solid black;" --> NN |
+
+|<!-- style="border: 1px solid black;" -->  Ehe                                                                                                                                                       |
+|:----------:|:----------------------------------------------------------:|:----------------------------------------------------------:|:----------:|:------:|
+|<!-- style="border: 1px solid black;" --><u>EheID</u>|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">EFrauID</span>|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">EFrauID</span>|<!-- style="border: 1px solid black;" -->Anfangsdatum|<!-- style="border: 1px solid black;" -->Enddatum|
+
+|<!-- style="border: 1px solid black;" -->Ehemann               |
+|:------------:|:--:|:--:|
+|<!-- style="border: 1px solid black;" --><u>EMannID</u>|<!-- style="border: 1px solid black;" --> VN |<!-- style="border: 1px solid black;" -->NN |
 
 ## 1.5 Implementierung
 
