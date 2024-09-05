@@ -142,7 +142,7 @@ Eine 1 : 1 Beziehung im ER – Modell wird umgesetzt, indem ein beliebiger Prim�
 ![Regel 3](./img/3-Regel.svg)<!-- style="width: 40%; padding:1em;" -->
 
 <p class="kasten">
-Eine 1 : n Beziehung wird so umgesetzt, dass der Primärschlüs-sel der 1-Entitätsklasse Fremdschlüssel der n-Entitätsklasse wird.
+Eine 1 : n Beziehung wird so umgesetzt, dass der Primärschlüssel der 1-Entitätsklasse Fremdschlüssel der n-Entitätsklasse wird.
 </p>
 
 |<!-- style="border: 1px solid black;" --> Schüler |
@@ -158,7 +158,7 @@ Eine 1 : n Beziehung wird so umgesetzt, dass der Primärschlüs-sel der 1-Entit�
 ![Regel 4](./img/4-Regel.svg)<!-- style="width: 40%; padding:1em;" -->
 
 <p class="kasten">
-Jede m : n Beziehung im ER – Modell wird umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primär-schlüssel beider Entitätsklassen als Fremdschlüssel beinhaltet.
+Jede m : n Beziehung im ER – Modell wird umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primärschlüssel beider Entitätsklassen als Fremdschlüssel beinhaltet.
 </p>
 
 |<!-- style="border: 1px solid black;" -->Lehrerin                    |
