@@ -117,9 +117,7 @@ window.LIA.settings.font_size = 2
 Jede Entitätsklasse wird in eine Relation (Tabelle) mit Primärschlüssel(n) transformiert.
 </p>
 
-|<!-- style="border: 1px solid black;" -->Ehefrau |
-|:------------:|:--:|:--:|
-|<!-- style="border: 1px solid black;" --><u>EFrauID</u>| <!-- style="border: 1px solid black;" -->VN |<!-- style="border: 1px solid black;" --> NN |
+![Regel 1](./img/r1.svg)<!-- style="width: 40%; padding:1em;" -->
 
 #### Regel 2
 
@@ -129,13 +127,7 @@ Jede Entitätsklasse wird in eine Relation (Tabelle) mit Primärschlüssel(n) tr
 Eine 1 : 1 Beziehung im ER – Modell wird umgesetzt, indem ein beliebiger Primärschlüssel einer Entitätsklasse zum Fremdschlüssel der anderen Entitätsklasse wird.
 </p>
 
-|<!-- style="border: 1px solid black;" --> Ehefrau |
-|:--------:|:-------:|:------:|
-|<!-- style="border: 1px solid black;" --> <u>EFrauID</u> |<!-- style="border: 1px solid black;" --> VN |<!-- style="border: 1px solid black;" --> NN |
-
-|<!-- style="border: 1px solid black;" --> Ehemann |
-|:--------:|:-------:|:------:|:------:|
-|<!-- style="border: 1px solid black;" --> <u>EMannID</u> |<!-- style="border: 1px solid black;" --> VN |<!-- style="border: 1px solid black;" --> NN |<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">EFrauID</span> |
+![Regel 2](./img/r2.svg)<!-- style="width: 40%; padding:1em;" -->
 
 #### Regel 3
 
@@ -145,13 +137,7 @@ Eine 1 : 1 Beziehung im ER – Modell wird umgesetzt, indem ein beliebiger Prim�
 Eine 1 : n Beziehung wird so umgesetzt, dass der Primärschlüssel der 1-Entitätsklasse Fremdschlüssel der n-Entitätsklasse wird.
 </p>
 
-|<!-- style="border: 1px solid black;" --> Schüler |
-|:--------:|:-------:|:------:|:------:|
-|<!-- style="border: 1px solid black;" --><u>SchülerNr</u>|<!-- style="border: 1px solid black;" -->VN|<!-- style="border: 1px solid black;" -->NN|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">KlasseID</span>|
-
-|<!-- style="border: 1px solid black;" -->Klasse |
-|:--------:|:-------:|:------:|
-|<!-- style="border: 1px solid black;" --><u>KlasseID</u>|<!-- style="border: 1px solid black;" -->KlasseZi|<!-- style="border: 1px solid black;" -->Profil|
+![Regel 3](./img/r3.svg)<!-- style="width: 40%; padding:1em;" -->
 
 #### Regel 4
 
@@ -161,20 +147,7 @@ Eine 1 : n Beziehung wird so umgesetzt, dass der Primärschlüssel der 1-Entitä
 Jede m : n Beziehung im ER – Modell wird umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primärschlüssel beider Entitätsklassen als Fremdschlüssel beinhaltet.
 </p>
 
-|<!-- style="border: 1px solid black;" -->Lehrerin                    |
-|:--------:|:-------:|:------:|
-|<!-- style="border: 1px solid black;" --><u>LNr</u>|<!-- style="border: 1px solid black;" -->VN|<!-- style="border: 1px solid black;" -->NN|
-
-
-|<!-- style="border: 1px solid black;" -->unterrichtet|
-|:--------:|:-------:|:------:|
-|<!-- style="border: 1px solid black;" --><u>UNr</u>|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">LNr</span>|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">KlasseID</span>|
-
-
-|<!-- style="border: 1px solid black;" -->Klasse                      |
-|:-------------:|:------:|:----:|
-|<!-- style="border: 1px solid black;" --><u>KlasseID</u>|<!-- style="border: 1px solid black;" -->KlasseZi|<!-- style="border: 1px solid black;" -->Profil|
-
+![Regel 4](./img/r4.svg)<!-- style="width: 40%; padding:1em;" -->
 
 #### Regel 5
 
@@ -184,17 +157,7 @@ Jede m : n Beziehung im ER – Modell wird umgesetzt, indem eine zusätzliche Re
 Jede beliebige Beziehung mit Beziehungsattribut wird ins Relationenmodell umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primärschlüssel beider Entitätsklassen als Fremdschlüssel und die Beziehungsattribute beinhaltet.
 </p>
 
-|<!-- style="border: 1px solid black;" -->  Ehefrau               |
-|:------------:|:--:|:--:|
-|<!-- style="border: 1px solid black;" --><u>EFrauID</u>|<!-- style="border: 1px solid black;" --> VN |<!-- style="border: 1px solid black;" --> NN |
-
-|<!-- style="border: 1px solid black;" -->  Ehe                                                                                                                                                       |
-|:----------:|:----------------------------------------------------------:|:----------------------------------------------------------:|:----------:|:------:|
-|<!-- style="border: 1px solid black;" --><u>EheID</u>|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">EFrauID</span>|<!-- style="border: 1px solid black;" --><span style="border-bottom: 2px dashed #000;">EFrauID</span>|<!-- style="border: 1px solid black;" -->Anfangsdatum|<!-- style="border: 1px solid black;" -->Enddatum|
-
-|<!-- style="border: 1px solid black;" -->Ehemann               |
-|:------------:|:--:|:--:|
-|<!-- style="border: 1px solid black;" --><u>EMannID</u>|<!-- style="border: 1px solid black;" --> VN |<!-- style="border: 1px solid black;" -->NN |
+![Regel 5](./img/r5.svg)<!-- style="width: 40%; padding:1em;" -->
 
 ## 1.5 Implementierung
 
