@@ -117,7 +117,7 @@ window.LIA.settings.font_size = 2
 Jede Entitätsklasse wird in eine Relation (Tabelle) mit Primärschlüssel(n) transformiert.
 </p>
 
-![Regel 1](./img/r1.svg)<!-- style="width: 40%; padding:1em;" -->
+![Regel 1](./img/r1.svg)<!-- style="width: 30%; padding:1em;" -->
 
 #### Regel 2
 
@@ -147,7 +147,7 @@ Eine 1 : n Beziehung wird so umgesetzt, dass der Primärschlüssel der 1-Entitä
 Jede m : n Beziehung im ER – Modell wird umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primärschlüssel beider Entitätsklassen als Fremdschlüssel beinhaltet.
 </p>
 
-![Regel 4](./img/r4.svg)<!-- style="width: 40%; padding:1em;" -->
+![Regel 4](./img/r4.svg)<!-- style="width: 30%; padding:1em;" -->
 
 #### Regel 5
 
@@ -157,7 +157,7 @@ Jede m : n Beziehung im ER – Modell wird umgesetzt, indem eine zusätzliche Re
 Jede beliebige Beziehung mit Beziehungsattribut wird ins Relationenmodell umgesetzt, indem eine zusätzliche Relation gebildet wird, welche die Primärschlüssel beider Entitätsklassen als Fremdschlüssel und die Beziehungsattribute beinhaltet.
 </p>
 
-![Regel 5](./img/r5.svg)<!-- style="width: 40%; padding:1em;" -->
+![Regel 5](./img/r5.svg)<!-- style="width: 50%; padding:1em;" -->
 
 ## 1.5 Implementierung
 
